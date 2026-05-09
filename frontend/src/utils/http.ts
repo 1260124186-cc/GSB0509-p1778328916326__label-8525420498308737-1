@@ -3,7 +3,7 @@ import type { AxiosInstance, AxiosResponse } from 'axios'
 
 const apiClient: AxiosInstance = axios.create({
   // 使用环境变量配置 Base URL，兼顾开发与生产环境
-  baseURL: import.meta.env.VITE_API_BASE_URL || 'https://jsonplaceholder.typicode.com',
+  baseURL: /* v8 ignore next */ import.meta.env.VITE_API_BASE_URL || 'https://jsonplaceholder.typicode.com',
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json',

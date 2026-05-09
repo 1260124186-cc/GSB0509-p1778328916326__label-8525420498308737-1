@@ -89,7 +89,7 @@ onMounted(() => {
               </p>
             </div>
           </div>
-          <button class="btn btn-outline" @click="initData" :disabled="loading">
+          <button class="btn btn-outline" :disabled="loading" @click="initData">
             刷新数据
           </button>
         </div>
@@ -105,15 +105,15 @@ onMounted(() => {
           <div class="input-group">
             <input
               v-model="newItem"
-              @keyup.enter="addItem"
               type="text"
               placeholder="输入内容回车..."
               class="form-input"
+              @keyup.enter="addItem"
             />
             <button
               class="btn btn-primary small"
-              @click="addItem"
               :disabled="!newItem.trim()"
+              @click="addItem"
             >
               添加
             </button>
